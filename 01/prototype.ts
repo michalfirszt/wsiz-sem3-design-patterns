@@ -46,6 +46,36 @@ class Car extends Vehicle {
 let newCar = new Car()
 console.log(newCar.getNumberOfWheels())
 
+abstract class Model {
+    constructor() {}
+
+    private type: string
+
+    /**
+     * create
+     */
+    public create() {
+        
+    }
+
+    /**
+     * update
+     */
+    public update() {
+        
+    }
+}
+
+class Article extends Model {
+    constructor() {
+        super()
+    }
+}
+
+const article1 = new Article()
+
+article1.create()
+
 // let vehicleNumber1 = new Vehicle(2)
 // console.log(vehicleNumber1.getNumberOfWheels())
 
