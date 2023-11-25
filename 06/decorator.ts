@@ -28,6 +28,7 @@ class HybridCar extends CarBase {
      * startEngine
      */
     public startEngine() {
+        this.baseCar.startEngine()
         console.log('start electric engine');
     }
 }
