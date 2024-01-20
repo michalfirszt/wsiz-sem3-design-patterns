@@ -69,3 +69,28 @@ class CableWithStandardXYZ implements IStandardXYZ {
         return this.getSignalXYZ();
     }
 }
+
+class StandardABCToStandardXYZAdapter implements IStandardXYZ {
+    constructor(initialCableData: CableWithStandardABC) {
+        this.cableWithStandardABC = initialCableData;
+    }
+
+    private cableWithStandardABC: CableWithStandardABC;
+
+    /**
+     * connectCableXYZ
+     */
+    public connectCableXYZ(): number {
+        const result = this.cableWithStandardABC.getSignalA() + this.cableWithStandardABC.getSignalB() + this.cableWithStandardABC.getSignalC();
+
+        console.log('CableWithStandardXYZ connected');
+        console.log(`Signal XYZ: ${result}`);
+
+        return result;
+    }
+}
+
+const cableWithStandardABC = new CableWithStandardABC();
+const standardABCToStandardXYZAdapter = new StandardABCToStandardXYZAdapter(cableWithStandardABC);
+
+standardABCToStandardXYZAdapter.connectCableXYZ();
