@@ -33,7 +33,7 @@ class Button {
     /**
      * render
      */
-    public render() {
+    private render() {
         const button = `<button id="${this.state.id}" disabled="${this.state.disabeled}">${this.state.text}</button>`;
         console.log(button)
     }
@@ -41,8 +41,5 @@ class Button {
 
 const button = new Button({ id: 'example-button', text: 'Button Content', disabeled: false });
 
-button.setState({ id: 'example-button', text: 'Button Content', disabeled: true });
-
-// #1
-// 09:00
-// create class (other than Button) to show how to present state design pattern
+button.setState({ ...button.getState(), disabeled: true });
+button.setState({ ...button.getState(), text: 'Updated text' });
