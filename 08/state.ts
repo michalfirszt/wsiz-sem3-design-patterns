@@ -43,3 +43,9 @@ const button = new Button({ id: 'example-button', text: 'Button Content', disabe
 
 button.setState({ ...button.getState(), disabeled: true });
 button.setState({ ...button.getState(), text: 'Updated text' });
+
+// Example:
+// Input, example state: (id, value, placeholder, label, type)
+// Vidoe player: (time, volume, mute, play, pause, stop)
+// Channel Item: (active, color, name)
+// Message Item: (readed, sended, author, content, date)

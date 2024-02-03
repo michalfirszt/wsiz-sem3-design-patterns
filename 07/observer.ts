@@ -81,3 +81,9 @@ const weatherWebsite = new WeatherWebsite(weatherForecast)
 const weatherMobileApp = new WeatherMobileApp(weatherForecast)
 
 weatherForecast.setTemperature(15)
+
+// Examples:
+// Likes and views counter
+// Message communication
+// Online store: newsletter
+// System update notification
