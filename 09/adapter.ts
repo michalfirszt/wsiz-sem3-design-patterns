@@ -94,3 +94,9 @@ const cableWithStandardABC = new CableWithStandardABC();
 const standardABCToStandardXYZAdapter = new StandardABCToStandardXYZAdapter(cableWithStandardABC);
 
 standardABCToStandardXYZAdapter.connectCableXYZ();
+
+// Examples:
+// Numeric system - hexademical -> binary
+// DB connection - PostgreSQL -> MySQL
+// Bicycle - 4 wheels -> 2 wheels
+// Car engine - gasoline -> electric

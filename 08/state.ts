@@ -2,7 +2,7 @@
 type ButtonState = {
     id: string;
     text: string;
-    disabeled: boolean;
+    disabled: boolean;
 }
 
 class Button {
@@ -34,18 +34,18 @@ class Button {
      * render
      */
     private render() {
-        const button = `<button id="${this.state.id}" disabled="${this.state.disabeled}">${this.state.text}</button>`;
+        const button = `<button id="${this.state.id}" disabled="${this.state.disabled}">${this.state.text}</button>`;
         console.log(button)
     }
 }
 
-const button = new Button({ id: 'example-button', text: 'Button Content', disabeled: false });
+const button = new Button({ id: 'example-button', text: 'Button Content', disabled: false });
 
-button.setState({ ...button.getState(), disabeled: true });
+button.setState({ ...button.getState(), disabled: true });
 button.setState({ ...button.getState(), text: 'Updated text' });
 
 // Example:
 // Input, example state: (id, value, placeholder, label, type)
-// Vidoe player: (time, volume, mute, play, pause, stop)
+// Video player: (time, volume, mute, play, pause, stop)
 // Channel Item: (active, color, name)
 // Message Item: (readed, sended, author, content, date)
